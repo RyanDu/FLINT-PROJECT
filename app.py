@@ -1,8 +1,6 @@
 import pandas as pd
-import math
 import streamlit as st
-import numpy as np
-from typing import Dict, Any, List, Tuple
+from sku_engine import build_structure_dict_from_sheet, forecast_from_cohorts
 
 # --- streamlit init
 
@@ -12,7 +10,6 @@ st.title("Flint - data")
 def google_sheet_xls_url() -> str:
     return "https://docs.google.com/spreadsheets/d/11E79iziBz0g4xvppUXDZ_Jd6AoLPhboo0X2L-GG3D_U/export?format=xlsx"
 
-from sku_engine import build_structure_dict_from_sheet, forecast_from_cohorts
 
 WB = google_sheet_xls_url()
 
